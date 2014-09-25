@@ -1,0 +1,28 @@
+{
+    "name": "foobar",
+    "description": "A template to create node-module in fireball.",
+    "version": "0.0.0",
+    "keywords": [
+    ],
+    "scripts": {
+        "test": "mocha --require should"
+    },
+    "homepage": "https://github.com/fireball-x/foobar",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fireball-x/foobar.git"
+    },
+    "bugs": {
+        "url": "http://github.com/fireball-x/foobar/issues"
+    },
+    "licenses": [{
+        "type": "MIT",
+        "url": "http://github.com/fireball-x/foobar/raw/master/LICENSE"
+    }],
+    "devDependencies": {
+        "mocha": "",
+        "should": ""
+    },
+    "dependencies": {
+    }
+}
