@@ -1,23 +1,23 @@
 {
-    "name": "foobar",
+    "name": "fire-path",
     "description": "A template to create node-module in fireball.",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "keywords": [
     ],
     "scripts": {
         "test": "mocha --require should"
     },
-    "homepage": "https://github.com/fireball-x/foobar",
+    "homepage": "https://github.com/fireball-x/fire-path",
     "repository": {
         "type": "git",
-        "url": "https://github.com/fireball-x/foobar.git"
+        "url": "https://github.com/fireball-x/fire-path.git"
     },
     "bugs": {
-        "url": "http://github.com/fireball-x/foobar/issues"
+        "url": "http://github.com/fireball-x/fire-path/issues"
     },
     "licenses": [{
         "type": "MIT",
-        "url": "http://github.com/fireball-x/foobar/raw/master/LICENSE"
+        "url": "http://github.com/fireball-x/fire-path/raw/master/LICENSE"
     }],
     "devDependencies": {
         "mocha": "",
