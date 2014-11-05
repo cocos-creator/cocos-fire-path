@@ -10,6 +10,24 @@ FirePath.slash = function ( path ) {
     return path.replace(/\\/g, '/');
 };
 
+// pathA = foo/bar,         pathB = foo/bar/foobar, return true
+// pathA = foo/bar,         pathB = foo/bar,        return true
+// pathA = foo/bar/foobar,  pathB = foo/bar,        return false
+// pathA = foo/bar/foobar,  pathB = foobar/bar/foo, return false
+FirePath.contains = function ( pathA, pathB ) {
+    if ( pathA.length < pathB.length &&
+         pathB.indexOf (pathA) === 0 ) 
+    {
+        return true;
+    }
+
+    if ( pathA === pathB ) {
+        return true;
+    }
+
+    return false;
+};
+
 //
 var _ = {};
 var prop;
