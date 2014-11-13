@@ -15,6 +15,8 @@ FirePath.slash = function ( path ) {
 // pathA = foo/bar/foobar,  pathB = foo/bar,        return false
 // pathA = foo/bar/foobar,  pathB = foobar/bar/foo, return false
 FirePath.contains = function ( pathA, pathB ) {
+    pathA = Path.normalize(pathA);
+    pathB = Path.normalize(pathB);
     if ( pathA.length < pathB.length &&
          pathB.indexOf (pathA) === 0 ) 
     {
