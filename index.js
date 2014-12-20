@@ -18,7 +18,7 @@ FirePath.contains = function ( pathA, pathB ) {
     pathA = Path.normalize(pathA);
     pathB = Path.normalize(pathB);
     if ( pathA.length < pathB.length &&
-         pathB.indexOf (pathA) === 0 ) 
+         pathB.indexOf (pathA) === 0 )
     {
         return true;
     }
