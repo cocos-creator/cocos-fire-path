@@ -27,19 +27,20 @@ FirePath.stripSep = function ( path ) {
 FirePath.contains = function ( pathA, pathB ) {
     pathA = FirePath.stripSep(pathA);
     pathB = FirePath.stripSep(pathB);
-    var pathDirB = Path.dirname(pathB);
 
-    if ( pathA.length < pathDirB.length &&
-         pathDirB.indexOf (pathA) === 0 )
-    {
-        return true;
-    }
-
-    if ( pathA === pathDirB ) {
-        return true;
-    }
-
+    //
     if ( pathA === pathB ) {
+        return true;
+    }
+
+    // never compare files
+    if ( Path.dirname(pathA) === Path.dirname(pathB) ) {
+        return false;
+    }
+
+    if ( pathA.length < pathB.length &&
+         pathB.indexOf (pathA) === 0 )
+    {
         return true;
     }
 
