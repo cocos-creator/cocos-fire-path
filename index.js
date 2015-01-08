@@ -17,7 +17,7 @@ FirePath.stripSep = function ( path ) {
             break;
         }
     }
-    return path.substring(0,i);
+    return path.substring(0,i+1);
 };
 
 // pathA = foo/bar,         pathB = foo/bar/foobar, return true

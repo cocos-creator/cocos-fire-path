@@ -8,6 +8,9 @@ describe('FirePath.contains', function () {
         FirePath.contains('foo/bar', 'foo/bar')
         .should.eql(true, 'foo/bar == foo/bar');
 
+        FirePath.contains('foo/bar/foo-01', 'foo/bar/foo-02')
+        .should.eql(false, 'foo/bar/foo-01 != foo/bar/foo-02');
+
         FirePath.contains('foo/bar/foobar', 'foo/bar')
         .should.eql(false, 'foo/bar/foobar < foo/bar');
 
@@ -19,6 +22,20 @@ describe('FirePath.contains', function () {
 
         FirePath.contains('foo/bar/foobar', 'foo/bar/foobar/foobar.js')
         .should.eql(true, 'foo/bar/foobar > foo/bar/foobar/foobar.js' );
+    });
+
+    it('should work for complex typing', function () {
+        FirePath.contains('foo/bar/', 'foo/bar/foobar')
+        .should.eql(true, 'foo/bar/ > foo/bar/foobar');
+
+        FirePath.contains('foo/bar', 'foo/bar/')
+        .should.eql(true, 'foo/bar == foo/bar/');
+
+        FirePath.contains('foo/bar/', 'foo/bar')
+        .should.eql(true, 'foo/bar/ == foo/bar');
+
+        FirePath.contains('foo/bar/foo-01/', 'foo/bar/foo-02')
+        .should.eql(false, 'foo/bar/foo-01/ != foo/bar/foo-02');
     });
 });
 
