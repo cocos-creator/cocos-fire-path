@@ -1,7 +1,7 @@
 {
     "name": "fire-path",
     "description": "A template to create node-module in fireball.",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "keywords": [
     ],
     "scripts": {

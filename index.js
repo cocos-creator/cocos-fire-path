@@ -1,6 +1,10 @@
 var Path = require('path');
 var FirePath = {};
 
+FirePath.basenameNoExt = function ( path ) {
+    return Path.basename(path, Path.extname(path) );
+};
+
 FirePath.slash = function ( path ) {
     // var isExtendedLengthPath = /^\\\\\?\\/.test(path);
     // var hasNonAscii = /[^\x00-\x80]+/.test(path);
