@@ -24,6 +24,11 @@ FirePath.stripSep = function ( path ) {
     return path.substring(0,i+1);
 };
 
+FirePath.stripExt = function ( path ) {
+    var extname = Path.extname(path);
+    return path.substring(0, path.length-extname.length);
+};
+
 // pathA = foo/bar,         pathB = foo/bar/foobar, return true
 // pathA = foo/bar,         pathB = foo/bar,        return true
 // pathA = foo/bar/foobar,  pathB = foo/bar,        return false

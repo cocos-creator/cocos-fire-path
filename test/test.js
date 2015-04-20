@@ -66,3 +66,19 @@ describe('FirePath.slash', function () {
         .should.eql('c:/aaaa/bbbb/你好');
     });
 });
+
+describe('FirePath.stripExt', function () {
+    it('should work for simple case', function () {
+        FirePath.stripExt('foo/bar/foobar.sprite')
+        .should.eql('foo/bar/foobar');
+
+        FirePath.stripExt('foo/bar/foobar')
+        .should.eql('foo/bar/foobar');
+
+        FirePath.stripExt('foo/bar/foobar.sprite.foo')
+        .should.eql('foo/bar/foobar.sprite');
+
+        FirePath.stripExt('foo/bar/foobar.png/hello.sprite')
+        .should.eql('foo/bar/foobar.png/hello');
+    });
+});
