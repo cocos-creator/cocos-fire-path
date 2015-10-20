@@ -22,6 +22,13 @@ describe('FirePath.contains', function () {
 
         FirePath.contains('foo/bar/foobar', 'foo/bar/foobar/foobar.js')
         .should.eql(true, 'foo/bar/foobar > foo/bar/foobar/foobar.js' );
+
+        FirePath.contains('foo/bar', 'foo/bar1/foobar')
+        .should.eql(false, 'foo/bar != foo/bar1/foobar' );
+
+        FirePath.contains('foo/bar1/', 'foo/bar1/foobar')
+        .should.eql(true, 'foo/bar1/ == foo/bar1/foobar' );
+
     });
 
     it('should work for complex typing', function () {
